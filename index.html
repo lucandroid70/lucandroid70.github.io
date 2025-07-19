@@ -23,6 +23,143 @@
         <link href="css/magnific-popup.css" rel="stylesheet">
 
         <link href="css/tooplate-waso-strategy.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Stili per il chatbot -->
+<style>
+    #chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 350px;
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+        display: none;
+    }
+    
+    #chatbot-header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 15px;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    #chatbot-body {
+        height: 300px;
+        background-color: #f9f9f9;
+        padding: 15px;
+        overflow-y: auto;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+    
+    #chatbot-footer {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        border: 1px solid #ddd;
+        display: flex;
+    }
+    
+    #chatbot-input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    #chatbot-send {
+        margin-left: 10px;
+        padding: 10px 15px;
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #chatbot-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #2c3e50;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+    
+    .message {
+        margin-bottom: 10px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        max-width: 80%;
+    }
+    
+    .bot-message {
+        background-color: #e3f2fd;
+        align-self: flex-start;
+    }
+    
+    .user-message {
+        background-color: #dcf8c6;
+        align-self: flex-end;
+        margin-left: auto;
+    }
+    
+    .message-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #chatbot-close {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 <!--
 
@@ -347,9 +484,9 @@
                             <div class="about-image-wrap h-100">
                                 <iframe src="https://www.tiktok.com/embed/v2/7495259896410148119" style="width: 100%; height: 100%; min-height: 780px;" frameborder="0" allowfullscreen></iframe>
                                 <div class="about-image-info">
-                                    <h4 class="text-white">Sarah Marturana, di TocToc Group©</h4>
+                                    <h5 class="text-white">Sarah Marturana, CEO di TocToc Tunisia©.</h5>
 
-                                    <p class="text-white mb-0">CEO di TocToc Tunisia© .</p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -413,13 +550,14 @@
                                     <button class="nav-link active" id="nav-business-tab" data-bs-toggle="tab" data-bs-target="#nav-business" type="button" role="tab" aria-controls="nav-business" aria-selected="true">
                                         <h3>Defiscalizzazione della pensione</h3>
 
-                                        <span>Sei un pensionato Italiano, che vuoi vivere in Tunsiia, Noi come agenzia ti supportiamo in tutto.</span>
+                                        <h6>Sei un pensionato Italiano, che vuoi vivere in Tunisia, Noi come agenzia ti supportiamo in tutto.</h6>
                                     </button>
 
                                     <button class="nav-link" id="nav-strategy-tab" data-bs-toggle="tab" data-bs-target="#nav-strategy" type="button" role="tab" aria-controls="nav-strategy" aria-selected="false">
                                         <h3>Assicurazione Sanitaria</h3>
                                         
-                                        <span>Pacchetto Assicurazione SALUTE ITALIANO IN TUNISIA.</span>
+                                        <h6>Pacchetto Assicurazione SALUTE ITALIANO IN TUNISIA.</h6>
+                                        <h6>Clicca per sentire Mirko Salvati di TocTocTunisia.</h6>
                                     </button>
 
                                     <button class="nav-link" id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#nav-video" type="button" role="tab" aria-controls="nav-video" aria-selected="false">
@@ -490,6 +628,11 @@
                     </div>
                 </div>
             </section>
+
+
+
+
+
 
             
 
@@ -616,6 +759,203 @@
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/click-scroll.js"></script>
         <script src="js/custom.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Pulsante per attivare il chatbot -->
+<div id="chatbot-toggle">💬ChatIA</div>
+
+<!-- Container del chatbot -->
+<div id="chatbot-container">
+    <div id="chatbot-header">
+        <span>Ciao sono Assistente basato sull'IA, di TocTocGroup©</span>
+        <button id="chatbot-close">×</button>
+    </div>
+    <div id="chatbot-body">
+        <div class="message-container" id="chatbot-messages">
+            <div class="message bot-message">
+                Benvenuto! Sono l'assistente virtuale di TocToc Tunisia. Come posso aiutarti oggi?
+            </div>
+        </div>
+    </div>
+    <div id="chatbot-footer">
+        <input type="text" id="chatbot-input" placeholder="Scrivi il tuo messaggio...">
+        <button id="chatbot-send">Invia</button>
+    </div>
+</div>
+
+<!-- JAVASCRIPT FILES -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<script src="js/click-scroll.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Elementi del DOM
+        const toggleBtn = document.getElementById('chatbot-toggle');
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const closeBtn = document.getElementById('chatbot-close');
+        const sendBtn = document.getElementById('chatbot-send');
+        const inputField = document.getElementById('chatbot-input');
+        const messagesContainer = document.getElementById('chatbot-messages');
+        
+        // Risposte predefinite per parole chiave
+        const keywordResponses = {
+            'trasferimento': 'Per informazioni sul trasferimento in Tunisia con la pensione defiscalizzata, visita il nostro sito TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/',
+            'tunisia': 'La Tunisia offre un regime fiscale vantaggioso per i pensionati. Scopri di più sul nostro sito TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/',
+            'defiscalizzazione': 'La defiscalizzazione della pensione in Tunisia può portare a notevoli vantaggi economici. Visita TocToc Tunisia Simulatore di Pensione defiscalizzata per maggiori dettagli: https://www.toctocgroup.com/',
+            'ex-inpdap': 'Per i pensionati ex-INPDAP, la Tunisia offre opportunità interessanti di defiscalizzazione. Consulta TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/',
+            'inps': 'Se sei un pensionato INPS, potresti beneficiare del regime di defiscalizzazione in Tunisia. Scopri di più su TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/',
+            'pensionato': 'Come pensionato, potresti essere interessato al regime di defiscalizzazione offerto dalla Tunisia. Visita TocToc Tunisia Simulatore di Pensione defiscalizzata per una simulazione: https://www.toctocgroup.com/',
+            'carabinieri': 'Per i pensionati delle Forze dell\'Ordine come i Carabinieri, la Tunisia offre soluzioni interessanti. Scopri di più su TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/',
+            'carabiniere': 'Come Carabiniere in pensione, potresti beneficiare della defiscalizzazione in Tunisia. Visita TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/',
+            'polizia': 'I pensionati della Polizia possono trovare vantaggi nel regime fiscale tunisino. Maggiori informazioni su TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/',
+            'als': 'Per informazioni specifiche per gli appartenenti all\'ALS, contattaci tramite il sito TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/',
+            'medico': 'Anche i medici pensionati possono beneficiare della defiscalizzazione in Tunisia. Scopri come su TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/',
+            'infermiere': 'Gli infermieri pensionati possono trovare vantaggi nel trasferirsi in Tunisia. Visita TocToc Tunisia Simulatore di Pensione defiscalizzata per maggiori informazioni: https://www.toctocgroup.com/',
+'creato': 'Sono stato creato dalla sezione di ricerca e sviluppo di TocTocGroup, Mi chiamo CiccioBot, e sono una AI semplice, ma funzionale, mi ha creato Luca Sabato',
+'chiami': 'Sono stato creato dalla sezione di ricerca e sviluppo di TocTocGroup, Mi chiamo CiccioBot, e sono una AI semplice, ma funzionale, mi ha creato Luca Sabato',
+'sabato': 'Sono stato creato da Luca Sabato, Mi chiamo CiccioBot, e sono una AI semplice, ma funzionale',
+'sarah': 'Sarah Marturana è la CEO e fondatrice di TocToc Group, specializzata nell\'assistenza ai pensionati italiani che vogliono trasferirsi in Tunisia. Con la sua esperienza, guida personalmente molti clienti nel processo di defiscalizzazione. Scopri di più: https://www.toctocgroup.com/chi-siamo/',
+'mirko': 'Mirko Salvati è uno dei consulenti esperti di TocToc Group, specializzato nella gestione delle pratiche burocratiche e nell\'assistenza legale per i pensionati italiani in Tunisia. Offre supporto personalizzato per tutta la procedura di trasferimento. Maggiori info: https://www.toctocgroup.com/servizi/',
+'marturana': 'Sarah Marturana è la CEO e fondatrice di TocToc Group, specializzata nell\'assistenza ai pensionati italiani che vogliono trasferirsi in Tunisia. Con la sua esperienza, guida personalmente molti clienti nel processo di defiscalizzazione. Scopri  di più: https://www.toctocgroup.com/chi-siamo/',
+'salvati': 'Mirko Salvati è uno dei consulenti esperti di TocToc Group, specializzato nella gestione delle pratiche burocratiche e nell\'assistenza legale per i pensionati italiani in Tunisia. Offre supporto personalizzato per tutta la procedura di trasferimento.  Maggiori info: https://www.toctocgroup.com/servizi/',
+'sarah marturana': 'Sarah Marturana, fondatrice di TocToc Group, è un\'esperta in defiscalizzazione pensioni e trasferimenti in Tunisia. Offre consulenza personalizzata e segue direttamente i clienti in tutte le fasi del processo. Vedi il suo profilo: https://www.toctocgroup.com/chi-siamo/',
+};
+        
+        // Default response
+        const defaultResponse = 'Grazie per il tuo messaggio. Per informazioni su trasferimento in Tunisia, defiscalizzazione della pensione e simulazioni, visita il nostro sito TocToc Tunisia Simulatore di Pensione defiscalizzata: https://www.toctocgroup.com/';
+        
+        // Mostra/nascondi chatbot
+        toggleBtn.addEventListener('click', function() {
+            chatbotContainer.style.display = chatbotContainer.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        closeBtn.addEventListener('click', function() {
+            chatbotContainer.style.display = 'none';
+        });
+        
+        // Invia messaggio
+        function sendMessage() {
+            const messageText = inputField.value.trim();
+            if (messageText === '') return;
+            
+            // Aggiungi messaggio utente
+            addMessage(messageText, 'user');
+            
+            // Pulisci input
+            inputField.value = '';
+            
+            // Simula risposta dopo un breve ritardo
+            setTimeout(function() {
+                let response = defaultResponse;
+                
+                // Cerca corrispondenze con parole chiave
+                const lowerMessage = messageText.toLowerCase();
+                for (const keyword in keywordResponses) {
+                    if (lowerMessage.includes(keyword)) {
+                        response = keywordResponses[keyword];
+                        break;
+                    }
+                }
+                
+                addMessage(response, 'bot');
+            }, 500);
+        }
+        
+        // Aggiungi un messaggio alla chat
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.classList.add(sender === 'bot' ? 'bot-message' : 'user-message');
+            messageDiv.textContent = text;
+            
+            const containerDiv = document.createElement('div');
+            containerDiv.classList.add('message-container');
+            containerDiv.appendChild(messageDiv);
+            
+            messagesContainer.appendChild(containerDiv);
+            
+            // Scorri verso il basso per mostrare il nuovo messaggio
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        // Gestisci invio messaggio
+        sendBtn.addEventListener('click', sendMessage);
+        
+        inputField.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        // Messaggio iniziale
+        addMessage('Digita una parola chiave come "trasferimento", "Tunisia", "defiscalizzazione", "INPS", "pensionato", o altre per ottenere informazioni specifiche.', 'bot');
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+=======================================================================
+                              COPYRIGHT NOTICE
+=======================================================================
+
+// Copyright  © 2025 Luca Sabato. Tutti i diritti a me riservati.
+//
+// Sito ottimizzato con algoritmo proprietario per sfruttare SEO 2.0 IA 
+//
+// Quest'opera è protetta dalle leggi sul diritto d'autore e dalle altre leggi applicabili.
+// La riproduzione, modifica, distribuzione o riutilizzo di questo codice, per intero o in parte,
+// senza l'autorizzazione scritta dell'autore è espressamente vietata.
+//
+// @author    Luca Sabato 
+// @contact   luca.droi@outlook.it , lucandroid70@gmail.com , luca.sabato@ikmail.com , Telegram https://t.me/LucaHomer70
+// @copyright Luca Sabato © 2025
+// @version   1.0
+// @date      Luglio 2025
+//
+// AVVERTENZA: Questo software è protetto dalle leggi sul copyright.
+// Qualsiasi utilizzo non autorizzato costituirà una violazione delle leggi vigenti
+// e sarà perseguibile secondo i termini di legge.
+
+=======================================================================
+                           END COPYRIGHT NOTICE
+=======================================================================
+
+-->
+
+
+
+
 
     </body>
 </html>
