@@ -354,7 +354,6 @@
 							
 								<section class="col-4 col-12-mobile">
 									<header>
-										<h2 class="icon solid fa-camera circled"><span class="label">Photos</span></h2>
 									</header>
 									<div class="row gtr-25">
 										
@@ -384,7 +383,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Luca Droi© 2025. All rights reserved.</li><li>Design: <a href="https://lucandroid70.github.io/">HTML5 UP</a></li>
+											<li>&copy; Luca Droi© 2025. Tutti i diritti riservati.</li><li>Design: <a href="https://lucandroid70.github.io/">Luca Droi© 2025</a></li>
 										</ul>
 									</div>
 
@@ -406,5 +405,54 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+
+
+
+
+
+
+
+
+
+
+<div id="privacy-banner" style="position:fixed; bottom:0; width:100%; background:#f4f4f4; color:#000; padding:20px; box-shadow:0 -2px 5px rgba(0,0,0,0.2); display:flex; justify-content:space-between; align-items:center; z-index:1000;">
+  <div style="flex:1; font-size:14px;">
+    Questo sito non raccoglie dati né usa cookie. Puoi scegliere se proseguire.
+  </div>
+  <div style="display:flex; gap:10px;">
+    <button onclick="hideBanner('Accettato')" style="background-color:#4CAF50; color:white; border:none; padding:10px; cursor:pointer;">Accetto</button>
+    <button onclick="hideBanner('Rifiutato')" style="background-color:#f44336; color:white; border:none; padding:10px; cursor:pointer;">Rifiuto</button>
+  </div>
+</div>
+
+<script>
+  function hideBanner(choice) {
+    document.getElementById('privacy-banner').style.display = 'none';
+    console.log("Consenso:", choice);
+    // Nessuna memorizzazione dei dati
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 	</body>
 </html>
