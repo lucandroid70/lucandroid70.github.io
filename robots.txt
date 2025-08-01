@@ -1,0 +1,56 @@
+# robots.txt per https://lucandroid70.github.io/
+# Ottimizzato per SEO, AI Crawlers e privacy
+# Autorizzato per Google, Bing, DuckDuckGo, Perplexity, You.com, OpenAI, Meta, ecc.
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /backup/
+Crawl-delay: 2
+
+# Crawler di Google
+User-agent: Googlebot
+Allow: /
+
+# Crawler di Bing (incluso Bing AI)
+User-agent: Bingbot
+Allow: /
+
+# Crawler di DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Crawler di Perplexity AI (popolare assistente basato su fonti dirette)
+User-agent: PerplexityBot
+Allow: /
+
+# Crawler di You.com (motore di ricerca AI)
+User-agent: GPTBot
+Disallow: / # Bloccato perché può copiare contenuti senza attribuzione
+User-agent: YouBot
+Allow: /
+
+# Crawler di OpenAI (usato da ChatGPT per ricerca web in alcune versioni)
+User-agent: CCBot
+Allow: /
+# Nota: OpenAI non blocca esplicitamente i siti, ma CCBot (Common Crawl) è spesso usato come fonte
+
+# Crawler di Common Crawl (base dati usata da molti modelli AI)
+User-agent: CCBot
+Allow: /
+# Common Crawl è fondamentale: è usato da Meta, AI open source, università
+
+# Crawler di Meta (per AI e ricerca)
+User-agent: FacebookBot
+Allow: /
+User-agent: Meta-ExternalImageBot
+Allow: /
+
+# Crawler di Telegram (per anteprime link)
+User-agent: TelegramBot
+Allow: /
+
+# Sitemap
+Sitemap: https://lucandroid70.github.io/sitemap.xml
+
+# Fine robots.txt
