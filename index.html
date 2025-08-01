@@ -414,6 +414,47 @@
 
 
 
+<div id="privacy-banner" style="position:fixed; bottom:0; width:100%; background:#f4f4f4; color:#000; padding:20px; box-shadow:0 -2px 5px rgba(0,0,0,0.2); display:flex; justify-content:space-between; align-items:center; z-index:1000;">
+  <div style="flex:1; font-size:14px;">
+    Questo sito non raccoglie dati né usa cookie. Puoi scegliere se proseguire.
+  </div>
+  <div style="display:flex; gap:10px;">
+    <button onclick="hideBanner('Accettato')" style="background-color:#4CAF50; color:white; border:none; padding:10px; cursor:pointer;">Accetto</button>
+    <button onclick="rejectAction()" style="background-color:#f44336; color:white; border:none; padding:10px; cursor:pointer;">Rifiuto</button>
+  </div>
+</div>
+
+<script>
+  function hideBanner(choice) {
+    document.getElementById('privacy-banner').style.display = 'none';
+    console.log("Consenso:", choice);
+    // Nessuna memorizzazione dei dati
+  }
+
+  function rejectAction() {
+    hideBanner('Rifiutato');
+    window.location.href = "https://www.google.it";
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- privacy 
+		
 
 <div id="privacy-banner" style="position:fixed; bottom:0; width:100%; background:#f4f4f4; color:#000; padding:20px; box-shadow:0 -2px 5px rgba(0,0,0,0.2); display:flex; justify-content:space-between; align-items:center; z-index:1000;">
   <div style="flex:1; font-size:14px;">
@@ -433,7 +474,7 @@
   }
 </script>
 
-
+-->
 
 
 
