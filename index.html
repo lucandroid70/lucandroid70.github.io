@@ -324,6 +324,365 @@
         <script src="assets/js/main.js"></script>
     </div>
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner ToctocGroup</title>
+    <!-- Font e Icone per uno stile pulito -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            padding: 20px;
+        }
+
+        /* --- CONTENITORE CENTRANTE --- */
+        .banner-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* --- IL BANNER RIDIMENSIONATO (ORA è UN LINK) --- */
+        a.banner-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+            max-width: 960px;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        a.banner-link:hover {
+            transform: scale(1.01);
+        }
+
+        .banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 12px;
+            padding: 16px 28px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .banner:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        /* --- SEZIONE SINISTRA: LOGO --- */
+        .banner-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .logo-placeholder {
+            width: 50px;
+            height: 50px;
+            background: #e67e22;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+            box-shadow: 0 3px 6px rgba(230, 126, 34, 0.3);
+            background-image: url('https://www.toctoctunisia.com/wp-content/uploads/2022/07/cropped-logoTocToc3-1-1.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #e67e22;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text .brand {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #2c3e50;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text .brand span {
+            color: #e67e22;
+        }
+
+        .logo-text .tagline {
+            font-size: 0.7rem;
+            color: #7f8c8d;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        /* --- SEZIONE CENTRALE: TESTO --- */
+        .banner-center {
+            flex: 2;
+            padding: 0 15px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .banner-center h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 4px;
+            letter-spacing: -0.3px;
+        }
+
+        .banner-center .highlight {
+            color: #e67e22;
+            position: relative;
+        }
+
+        .banner-center p {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 400;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .banner-center .icons {
+            margin-top: 6px;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+        }
+
+        .banner-center .icons i {
+            margin: 0 5px;
+            color: #e67e22;
+        }
+
+        /* --- SEZIONE DESTRA: CTA --- */
+        .banner-right {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            pointer-events: none;
+        }
+
+        .btn-cta {
+            background: #e67e22;
+            color: white !important;
+            padding: 12px 26px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            pointer-events: auto;
+        }
+
+        .btn-cta i {
+            font-size: 1rem;
+        }
+
+        .btn-cta:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-cta:active {
+            transform: scale(0.96);
+        }
+
+        .banner-right .info-link {
+            font-size: 0.7rem;
+            color: #95a5a6;
+            text-decoration: none;
+            border-bottom: 1px dashed #bdc3c7;
+            pointer-events: auto;
+        }
+
+        .banner-right .info-link:hover {
+            color: #e67e22;
+        }
+
+        /* --- RESPONSIVE RIDIMENSIONATO --- */
+        @media (max-width: 860px) {
+            .banner {
+                padding: 16px 20px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .banner-left {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .banner-center {
+                padding: 0;
+            }
+
+            .banner-center h2 {
+                font-size: 1.5rem;
+            }
+
+            .banner-center p {
+                font-size: 0.95rem;
+            }
+
+            .banner-right {
+                width: 100%;
+                pointer-events: auto;
+            }
+
+            .btn-cta {
+                width: 80%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .banner-center h2 {
+                font-size: 1.2rem;
+            }
+
+            .banner-center p {
+                font-size: 0.85rem;
+            }
+
+            .btn-cta {
+                font-size: 0.95rem;
+                padding: 10px 16px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CONTENITORE CHE CENTRA IL BANNER -->
+    <div class="banner-wrapper">
+        <a href="https://www.toctocgroup.com" class="banner-link" target="_blank" rel="noopener noreferrer">
+            <div class="banner" id="bannerMain">
+
+                <!-- SINISTRA: Logo -->
+                <div class="banner-left">
+                    <div class="logo-placeholder" role="img" aria-label="Logo ToctocGroup"></div>
+                    <div class="logo-text">
+                        <div class="brand">TocToc<span>Group</span></div>
+                        <div class="tagline">La tua pensione senza tasse</div>
+                    </div>
+                </div>
+
+                <!-- CENTRO: Testo -->
+                <div class="banner-center">
+                    <h2>
+                        Trasferimento e <span class="highlight">Defiscalizzazione</span> in Tunisia
+                    </h2>
+                    <p>
+                        Pensioni italiane, paghi il 4% di tasse in Tunisia. Trasferisciti con noi.
+                    </p>
+                    <div class="icons">
+                        <i class="fas fa-check-circle"></i> Assistenza completa
+                        <i class="fas fa-check-circle" style="margin-left: 10px;"></i> Vantaggi fiscali
+                    </div>
+                </div>
+
+                <!-- DESTRA: Call to Action -->
+                <div class="banner-right">
+                    <a href="https://www.toctocgroup.com" class="btn-cta" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-arrow-right"></i> Scopri di più
+                    </a>
+                    <a href="https://www.toctocgroup.com" class="info-link" target="_blank" rel="noopener noreferrer">
+                        www.toctocgroup.com
+                    </a>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT: Tracciamento click -->
+    <script>
+        (function() {
+            const bannerLink = document.querySelector('.banner-link');
+            const cta = document.querySelector('.btn-cta');
+            const infoLink = document.querySelector('.info-link');
+
+            // Tracciamento click sul banner (intero)
+            bannerLink.addEventListener('click', function(e) {
+                if (e.target.closest('.btn-cta') || e.target.closest('.info-link')) {
+                    return;
+                }
+                console.log('Banner cliccato: navigazione verso toctocgroup.com');
+            });
+
+            // Tracciamento click sul CTA
+            cta.addEventListener('click', function(e) {
+                e.stopPropagation();
+                console.log('CTA cliccato: Scopri di più');
+            });
+
+            // Tracciamento click sul link info
+            infoLink.addEventListener('click', function(e) {
+                e.stopPropagation();
+                console.log('Link cliccato: toctocgroup.com');
+            });
+
+            console.log('Banner ToctocGroup - Definitivamente centrato!');
+        })();
+    </script>
+
+</body>
 </html>
 
 
