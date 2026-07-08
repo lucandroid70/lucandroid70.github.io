@@ -1,9 +1,13 @@
- <!DOCTYPE HTML>
+<!DOCTYPE html>
+
+
 <!--
+
 =======================================================================
                               COPYRIGHT NOTICE
 =======================================================================
-// Copyright  © 2025 Luca Sabato. Tutti i diritti a me riservati.
+
+// Copyright  © 2026 Luca Sabato. Tutti i diritti a me riservati.
 //
 // Sito ottimizzato con algoritmo proprietario per sfruttare SEO 2.0 IA 
 //
@@ -13,318 +17,1234 @@
 //
 // @author    Luca Sabato 
 // @contact   luca.droi@outlook.it , lucandroid70@gmail.com , luca.sabato@ikmail.com , Telegram https://t.me/LucaHomer70
-// @copyright Luca Sabato © 2025
+// @copyright Luca Sabato © 2026
 // @version   1.2
-// @date      Luglio 2025
+// @date      Luglio 2026
+//
+// Siti realizzati:
+// - https://www.toctoctunsisia.com
+// - https://www.toctocgroup.com
+// - https://www.sudioconsuelnzatunsia.com
 //
 // AVVERTENZA: Questo software è protetto dalle leggi sul copyright.
 // Qualsiasi utilizzo non autorizzato costituirà una violazione delle leggi vigenti
 // e sarà perseguibile secondo i termini di legge.
+
 =======================================================================
                            END COPYRIGHT NOTICE
 =======================================================================
+
 -->
+
+
 <html lang="it">
 <head>
-    <title>lucandroid70.github.io</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Luca Droi - Tecnico Informatico Senior. Servizi professionali di informatica, sicurezza, reti e recupero dati." />
+    <title>Luca Droi | Tecnico Informatico Senior</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== VARIABILI ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        :root {
+            --color-bg: #f8fafc;
+            --color-bg-alt: #f1f5f9;
+            --color-surface: #e2e8f0;
+            --color-text: #000000;
+            --color-text-muted: #000000;
+            --color-accent: #0b5e4a;
+            /* verde scuro */
+            --color-accent-hover: #084232;
+            --color-matrix: #0b5e4a;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
 
-<!-- SEO 2.0 AI - Meta Tags Personalizzati -->
-<meta name="description" content="Proteggi i tuoi dati con chi per anni ha protetto quelli delle Istituzioni IT. Soluzioni informatiche basate su fiducia, discrezione e sicurezza reale. Da chi ha difeso i dati sensibili, ora un supporto che rispetta i tuoi.">
-<meta name="keywords" content="Luca Droi, Cybersecurity Italia, protezione dati personali, recupero dati, installazione Windows 10/11, cloud privato NextCloud, NAS domestico, supporto IT, recupero password, reti Wi-Fi sicure, digital forensics, ministeri italiani, Istituzioni Italiane, Luca Sabato, consulente informatico, privacy dati, sicurezza informatica, supporto PC, backup automatico, reverse proxy, server locale">
-<meta name="author" content="Luca Droi">
-<meta name="email" content="luca.sabato@ikmail.com">
-<meta name="robots" content="index, follow">
-<meta name="language" content="it-IT">
-<meta name="geo.region" content="IT">
-<meta name="geo.placename" content="Italia">
-<meta name="revisit-after" content="7 days">
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-weight: 300;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-<!-- Open Graph / Social Sharing (per condivisione su WhatsApp, Facebook, ecc.) -->
-<meta property="og:title" content="Luca Droi | Cybersecurity per chi vuole un supporto affidabile">
-<meta property="og:description" content="Proteggi i tuoi dati con chi per anni ha protetto quelli delle Istituzioni IT. Soluzioni informatiche con il valore della fiducia.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://lucandroid70.github.io/">
-<meta property="og:image" content="https://lucandroid70.github.io/images/logo-seo.jpg">
-<meta property="og:site_name" content="Luca Droi - Cybersecurity & IT Solutions">
-<meta property="og:locale" content="it_IT">
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--color-bg);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-surface);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-accent);
+        }
 
-<!-- Twitter Card (opzionale, ma utile se condividi su X/Twitter) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@lucandroid70">
-<meta name="twitter:title" content="Luca Droi | Cybersecurity con valore umano">
-<meta name="twitter:description" content="Da chi ha difeso i dati sensibili, ora un supporto che rispetta i tuoi. Esperienza IT al servizio di privati e piccole imprese.">
-<meta name="twitter:image" content="https://lucandroid70.github.io/images/logo-seo.jpg">
+        /* ===== CANVAS MATRIX ===== */
+        #matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.25;
+        }
 
-<!-- Canonical URL (evita duplicati) -->
-<link rel="canonical" href="https://lucandroid70.github.io/">
+        /* ===== NAV ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.2rem 0;
+            transition: var(--transition);
+            background: transparent;
+        }
 
-<!-- Schema.org (Structured Data per AI e Google) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Luca Droi",
-  "url": "https://lucandroid70.github.io/",
-  "email": "mailto:luca.sabato@ikmail.com",
-  "image": "https://lucandroid70.github.io/images/foto-professionale.jpg",
-  "sameAs": [
-    "https://t.me/LucaHomer70"
-  ],
-  "jobTitle": "Tecnico Informatico Specializzato in Cybersecurity e Digital Forensics",
-  "description": "Esperto nella protezione dati, con esperienza pluriennale a supporto di Istituzioni Italiane. Fornisco soluzioni informatiche basate su fiducia, discrezione e sicurezza reale.",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Luca Droi Cybersecurity"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "IT",
-    "addressRegion": "Italia"
-  }
-}
-</script>
- 
-   
+        .navbar.scrolled {
+            background: rgba(248, 250, 252, 0.92);
+            backdrop-filter: blur(20px);
+            padding: 0.8rem 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-text);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .logo span {
+            color: var(--color-accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--color-accent);
+            transition: var(--transition);
+        }
+        .nav-links a:hover {
+            color: var(--color-text);
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-contact {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-left: 0.5rem;
+        }
+        .nav-contact a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            text-transform: none;
+            letter-spacing: 0;
+            color: var(--color-accent);
+            font-weight: 500;
+            background: rgba(11, 94, 74, 0.08);
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .nav-contact a:hover {
+            background: rgba(11, 94, 74, 0.18);
+            color: var(--color-accent-hover);
+        }
+        .nav-contact a::after {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-text);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #f8fafc 100%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--color-accent);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.3s;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.6s;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.9s;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--color-accent);
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 1.2s;
+        }
+        .hero-cta:hover {
+            background: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(11, 94, 74, 0.25);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 2s;
+        }
+        .scroll-indicator span {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+        }
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--color-accent), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scaleY(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ===== SEZIONI ===== */
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        .section-label {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            color: var(--color-accent);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .section-subtitle {
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        /* ===== SERVIZI ===== */
+        .services {
+            background: var(--color-bg-alt);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--color-bg);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-accent), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(11, 94, 74, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+        }
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(11, 94, 74, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            color: var(--color-accent);
+            font-size: 1.25rem;
+        }
+        .service-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        .service-text {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .service-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .service-list li {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .service-list li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-size: 0.8rem;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .about-text {
+            color: var(--color-text-muted);
+        }
+        .about-text p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+        .about-text strong {
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        .highlight-box {
+            background: var(--color-bg-alt);
+            border-left: 3px solid var(--color-accent);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-style: italic;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-text);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+        .skill-category {
+            background: var(--color-bg-alt);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .skill-category h4 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .skill-category ul {
+            list-style: none;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .skill-category ul li {
+            padding: 0.2rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .skill-category ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            width: 4px;
+            height: 4px;
+            background: var(--color-accent);
+            border-radius: 50%;
+        }
+
+        /* ===== PRIVACY ===== */
+        .privacy {
+            background: var(--color-bg-alt);
+        }
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--color-bg);
+            border-radius: 16px;
+            padding: 3rem;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .privacy-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--color-accent);
+            margin: 2rem 0 1rem;
+        }
+        .privacy-content h3:first-child {
+            margin-top: 0;
+        }
+        .privacy-content p,
+        .privacy-content li {
+            color: var(--color-text-muted);
+            margin-bottom: 0.75rem;
+        }
+        .privacy-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .privacy-content ul li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .privacy-content ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+        .privacy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(11, 94, 74, 0.08);
+            color: var(--color-accent);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, var(--color-bg-alt), var(--color-bg));
+            border: 1px solid rgba(11, 94, 74, 0.15);
+            border-radius: 20px;
+            padding: 3.5rem 2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .cta-box h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .cta-box p {
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .btn-primary {
+            background: var(--color-accent);
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(11, 94, 74, 0.2);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-text);
+            border: 1px solid var(--color-surface);
+        }
+        .btn-secondary:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--color-bg);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 2.5rem 0 2rem;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .footer-logo span {
+            color: var(--color-accent);
+        }
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-nav a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+        .footer-nav a:hover {
+            color: var(--color-accent);
+        }
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-contact a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--color-accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .footer-contact a:hover {
+            color: var(--color-accent-hover);
+        }
+        .footer-copy {
+            color: var(--color-text-muted);
+            font-size: 0.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* ===== REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .privacy-content {
+                padding: 2rem 1.5rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .nav-contact a span {
+                display: none;
+            }
+            .nav-contact a {
+                padding: 0.3rem 0.6rem;
+            }
+        }
+    </style>
 </head>
-<body class="homepage is-preload">
-    <div id="page-wrapper">
-        <!-- Header -->
-        <div id="header">
-            <div class="inner">
-                <header>
-                    <h1>
-                        <a href="index.html" id="logo" class="hero-title">
-                            Proteggi i tuoi dati con chi per anni<br>
-                            ha protetto quelli delle Istituzioni IT.<br>
-                            Soluzioni informatiche, con il valore della fiducia.                           
-                        </a>
-                    </h1>
-                    <hr />
-                    <p>La discrezione e la fiducia sono valori irrinunciabili per me</p>
-<p>Da chi ha difeso i dati sensibili, ora hai un supporto che rispetta i tuoi.</p>
-                </header>
-                <footer>
-                    <a href="#services" class="button circled scrolly">Inizia</a>
-                </footer>
-            </div>
+<body>
 
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="chisono.html">Chi Sono</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
-                </ul>
-            </nav>
+    <!-- CANVAS MATRIX -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Luca <span>Droi</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servizi">Servizi</a></li>
+                <li><a href="#chi-sono">Chi Sono</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+                <li class="nav-contact">
+                    <a href="https://wa.me/393662327049?text=Salve%20la%20contatto%20per%20informazioni%20inerenti%20l%27attivit%C3%A0%20informatica" target="_blank">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:luca.sabato@ikmail.com">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>Email</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
         </div>
+    </nav>
 
-        <!-- Banner -->
-        <section id="banner">
-            <header>
-                <h2>Questi sono i miei <strong>Servizi</strong>.</h2>
-            </header>
-        </section>
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-subtitle">Tecnico Informatico Senior</p>
+            <h1 class="hero-title">Luca Droi</h1>
+            <p class="hero-description">
+                Oltre 35 anni di esperienza istituzionale al servizio della tua sicurezza informatica.
+                Soluzioni personalizzate, privacy garantita, competenza senza compromessi.
+            </p>
+            <a href="https://wa.me/393662327049?text=Salve%20la%20contatto%20per%20informazioni%20inerenti%20l%27attivit%C3%A0%20informatica" class="hero-cta" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Contattami su WhatsApp
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scorri</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
+    <!-- SERVIZI -->
+    <section class="services" id="servizi">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">Cosa Offro</p>
+                <h2 class="section-title">Servizi Professionali</h2>
+                <p class="section-subtitle">Soluzioni informatiche su misura, dalla configurazione alla cybersecurity, con l'esperienza di chi ha protetto le infrastrutture dello Stato.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div></div>
+                    <h3 class="service-title">Installazione Sistemi Operativi</h3>
+                    <p class="service-text">Configurazione completa di PC, notebook e workstation con Windows 10/11 e GNU/Linux.</p>
+                    <ul class="service-list">
+                        <li>Setup iniziale con partizionamento del disco</li>
+                        <li>Installazione versione aggiornata del sistema</li>
+                        <li>Aggiornamenti di sicurezza e performance</li>
+                        <li>Configurazione account, privacy, periferiche</li>
+                    </ul>
+                </div>
 
-<!-- Sezione Servizi - Testo 18px, colore nero, nessun stile inline -->
-<section id="services" style="max-width: 900px; margin: 2rem auto; padding: 1rem; font-size: 19px; color: #000; line-height: 1.7;">
-    <h3>🔧 Installazione sistemi operativi Windows Legacy XP, Vista, Windows 7/8, Windows 10/11 /\ Gnu/Linux maggiori Distro</h3>
-    <p>Configurazione completa di PC, notebook e workstation con sistema operativo Windows 10 o 11 /\ Gnu/Linux maggiori Distro. L’installazione include:</p>
-    <ul>
-        <li>Setup iniziale con partizionamento del disco secondo necessità</li>
-        <li>Installazione della versione più aggiornata del sistema operativo</li>
-        <li>Applicazione di tutti gli aggiornamenti di sicurezza e performance</li>
-        <li>Configurazione account, privacy, lingua, periferiche e stampanti</li>
-        <li>Ottimizzazione del sistema per prestazioni fluide e affidabili</li>
-    </ul>
-    <p>Un servizio pensato per chi desidera un sistema pronto all’uso, senza pensieri.</p>
+                <div class="service-card reveal">
+                    <div></div>
+                    <h3 class="service-title">Cloud Privato NextCloud</h3>
+                    <p class="service-text">Soluzioni cloud personalizzate su server locale per professionisti, famiglie e piccole imprese.</p>
+                    <ul class="service-list">
+                        <li>Pieno controllo dei propri dati</li>
+                        <li>Sincronizzazione file, calendari, contatti</li>
+                        <li>Linux (Debian, Rocky Linux) con o senza Docker</li>
+                        <li>Configurazione avanzata con reverse proxy</li>
+                    </ul>
+                </div>
 
-    <h3>☁️ Cloud privato con NextCloud su server locale</h3>
-    <p>Progetto e installazione di soluzioni cloud personalizzate, ideali per professionisti, famiglie o piccole imprese che desiderano:</p>
-    <ul>
-        <li>Avere il pieno controllo dei propri dati</li>
-        <li>Mantenere la privacy senza dipendere da servizi esterni</li>
-        <li>Sincronizzare file, calendari, contatti e molto altro tra dispositivi</li>
-    </ul>
-    <p><strong>Dettagli tecnici:</strong></p>
-    <ul>
-        <li>Sistemi supportati: Linux (Debian, Rocky Linux), con o senza Docker</li>
-        <li>Tecnologia: NextCloud installato localmente, senza accesso remoto</li>
-        <li>Funzionalità opzionali: configurazione avanzata con reverse proxy (servizio premium)</li>
-        <li>Sicurezza: accessi criptati, configurazione utenti, backup automatici</li>
-    </ul>
+                <div class="service-card reveal">
+                    <div></div>
+                    <h3 class="service-title">Creazione NAS Domestici</h3>
+                    <p class="service-text">Sistemi NAS personalizzati per backup centralizzati e condivisione sicura.</p>
+                    <ul class="service-list">
+                        <li>Sistemi Linux o Windows</li>
+                        <li>Backup incrementali pianificati</li>
+                        <li>Condivisione sicura su rete locale</li>
+                        <li>Monitoraggio stato dischi e notifiche</li>
+                    </ul>
+                </div>
 
-    <h3>🗄️ Creazione NAS domestici o SOHO</h3>
-    <ul>
-        <li>Sistemi Linux o Windows</li>
-        <li>Backup incrementali pianificati</li>
-        <li>Condivisione sicura su rete locale</li>
-        <li>Monitoraggio stato dischi e notifiche automatiche</li>
-    </ul>
+                <div class="service-card reveal">
+                    <div></div>
+                    <h3 class="service-title">Recupero Credenziali</h3>
+                    <p class="service-text">Reset sicuro della password locale e accesso a file protetti su Windows, Mac e GNU/Linux.</p>
+                    <ul class="service-list">
+                        <li>Reset sicuro password locale</li>
+                        <li>Accesso ai file protetti</li>
+                        <li>Recupero credenziali di sistema</li>
+                    </ul>
+                </div>
 
-    <h3>🔐 Recupero credenziali e password Windows 10/11, Mac, GNU/Linux</h3>
-    <ul>
-        <li>Reset sicuro della password locale</li>
-        <li>Accesso ai file protetti</li>
-        <li>Recupero credenziali di sistema e applicazioni associate</li>
-    </ul>
+                <div class="service-card reveal">
+                    <div></div>
+                    <h3 class="service-title">Supporto Utenti & Cybersecurity</h3>
+                    <p class="service-text">Assistenza base e medio per utenti, con un focus sulla sicurezza informatica e best practice.</p>
+                    <ul class="service-list">
+                        <li>Configurazione posta elettronica sicura</li>
+                        <li>Navigazione protetta e antivirus</li>
+                        <li>Installazione software e aggiornamenti</li>
+                        <li>Pulizia e manutenzione del sistema</li>
+                        <li>Formazione su consapevolezza cyber</li>
+                    </ul>
+                </div>
 
-    <h3>📶 Supporto base e medio per utenti principianti</h3>
-    <ul>
-        <li>Configurazione posta elettronica (Outlook, Gmail, IMAP/POP)</li>
-        <li>Navigazione sicura online e protezione antivirus</li>
-        <li>Installazione software di uso comune (Office, PDF reader, browser alternativi)</li>
-        <li>Creazione backup personali su hard disk esterni</li>
-        <li>Organizzazione file e cartelle</li>
-        <li>Pulizia e manutenzione del sistema</li>
-    </ul>
+                <div class="service-card reveal">
+                    <div></div>
+                    <h3 class="service-title">Reti Cablate e Wi-Fi</h3>
+                    <p class="service-text">Progettazione e implementazione di reti per smart working, streaming e domotica.</p>
+                    <ul class="service-list">
+                        <li>Studio del segnale e distribuzione Wi-Fi</li>
+                        <li>Installazione ripetitori e access point</li>
+                        <li>Configurazione firewall e VLAN</li>
+                        <li>Reti miste Wi-Fi + Ethernet</li>
+                    </ul>
+                </div>
 
-    <h3>🌐 Creazione e implementazione di reti cablate e Wi-Fi</h3>
-    <ul>
-        <li>Studio del segnale e distribuzione Wi-Fi omogenea</li>
-        <li>Installazione ripetitori, access point e router avanzati</li>
-        <li>Configurazione firewall e protezione accessi</li>
-        <li>Reti miste Wi-Fi + Ethernet per prestazioni ottimali</li>
-        <li>Soluzioni ideali per smart working, streaming e domotica</li>
-    </ul>
+                <div class="service-card reveal">
+                    <div></div>
+                    <h3 class="service-title">Recupero Dati & Forensics</h3>
+                    <p class="service-text">Estrazione dati da supporti danneggiati con massima riservatezza e tecniche forensi.</p>
+                    <ul class="service-list">
+                        <li>Hard disk, SSD, USB, SD card</li>
+                        <li>Imaging bit-for-bit con FTK Imager</li>
+                        <li>Analisi con Autopsy e EnCase</li>
+                        <li>Recupero da dispositivi crittografati</li>
+                    </ul>
+                </div>
 
-    <h3>💾 Recupero dati da supporti danneggiati</h3>
-    <ul>
-        <li>Hard disk danneggiati</li>
-        <li>Chiavette USB non riconosciute</li>
-        <li>SD card da fotocamere o smartphone</li>
-        <li>SSD con settori corrotti</li>
-    </ul>
-    <p>Il servizio include analisi preliminare, estrazione dei dati leggibili e copia su nuovo dispositivo. Massima riservatezza garantita.</p>
+                <div class="service-card reveal">
+                    <div></div>
+                    <h3 class="service-title">Virtualizzazione & Container</h3>
+                    <p class="service-text">Ambienti virtuali e container per test, sviluppo e produzione, con competenze Docker e Proxmox.</p>
+                    <ul class="service-list">
+                        <li>Docker e container Linux</li>
+                        <li>Proxmox VE e Hyper-V</li>
+                        <li>Orchestrazione con Docker Compose</li>
+                        <li>Virtualizzazione di server e servizi</li>
+                    </ul>
+                </div>
 
- <h3>🎓 Corsi di Informatica: Alfabetizzazione Digitale e Formazione Tecnica Avanzata</h3>
-<p>Organizzo corsi pratici e mirati, in presenza o in remoto tramite Zoom e Microsoft Teams, rivolti a privati. I percorsi formativi spaziano dall'alfabetizzazione informatica di base fino a competenze avanzate per sistemisti, con un approccio pratico e su misura per ogni livello di partenza.</p>
-<ul>
-    <li><strong>Alfabetizzazione informatica:</strong> uso del PC, navigazione sicura, posta elettronica, cloud, dispositivi mobili</li>
-    <li><strong>Sicurezza informatica e fisica:</strong> protezione dati, antivirus, firewall, backup, autenticazione sicura, buone pratiche (security awareness)</li>
-    <li><strong>Sistemi GNU/Linux:</strong> amministrazione di sistema, shell, scripting, gestione utenti, servizi di rete</li>
-    <li><strong>Virtualizzazione e server GNU/Linux:</strong> configurazione macchine virtuali, gestione server web (Apache, Nginx), database</li>
-    <li><strong>Containerizzazione con Docker GNU/Linux:</strong> creazione e gestione di container, orchestrazione, ambienti di sviluppo e produzione</li>
-</ul>
-<p>I corsi sono strutturati in moduli progressivi, adatti a principianti ed esperti, e possono essere personalizzati in base alle esigenze specifiche del singolo o del gruppo.</p>
+                <div class="service-card reveal">
+                    <div></div>
+                    <h3 class="service-title">Corsi di Informatica</h3>
+                    <p class="service-text">Formazione pratica in presenza o remoto, da alfabetizzazione digitale a competenze avanzate.</p>
+                    <ul class="service-list">
+                        <li>Alfabetizzazione informatica di base</li>
+                        <li>Sicurezza informatica e fisica</li>
+                        <li>Amministrazione sistemi GNU/Linux</li>
+                        <li>Virtualizzazione e container (Docker)</li>
+                        <li>Digital Forensics e cybersecurity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Bottone WhatsApp -->
-    <p>Per un preventivo gratuito.</p>
-<a href="https://wa.me/393662327049?text=Salve%20la%20contatto%20per%20informazioni%20inerenti%20l%27attivit%C3%A0%20informatica" 
-   class="button" 
-   style="font-size:22px; color:#000;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-         alt="WhatsApp" 
-         style="height:20px; vertical-align:middle; margin-right:6px;">
-    Contattami via WhatsApp
-</a>
-</section>
+    <!-- ABOUT -->
+    <section class="about" id="chi-sono">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">Il Professionista</p>
+                <h2 class="section-title">Chi Sono</h2>
+                <p class="section-subtitle">La mia storia, la mia esperienza, la mia missione.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <p><strong>Luca Droi</strong> – Tecnico Informatico Senior con oltre 35 anni di esperienza istituzionale.</p>
+                    <p>Fino al 2026 ho svolto il ruolo di <strong>Analista Informatico Senior al Ministero della Difesa Italiana</strong>, operando in ambiti ad altissimo livello di sicurezza e criticità. Per oltre tre decenni, ho protetto le infrastrutture informatiche strategiche dello Stato, dove la discrezione, l'affidabilità e la competenza tecnica non sono semplici requisiti: sono condizioni essenziali.</p>
+                    <div class="highlight-box">
+                        <p>"Il mio lavoro non era visibile al pubblico. Non c'erano comunicati stampa, né conferenze. Ma ogni giorno, in silenzio, ero responsabile della stabilità, sicurezza e integrità di sistemi che gestivano informazioni sensibili."</p>
+                    </div>
+                    <p>Oggi metto la stessa dedizione al servizio di privati e piccole imprese. <strong>Digital Forensics, Cybersecurity, Virtualizzazione e Container (Docker)</strong> sono il mio pane quotidiano. Ogni intervento è personalizzato, documentato e trasparente. Nessun dato raccolto, nessuna traccia, nessun compromesso.</p>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-        <!-- Footer -->
-        <div id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <section class="contact">
-                            <header>
-                                <h3>Contattami</h3>
-                            </header>
-<p>Per un preventivo gratuito.</p>
-<a href="https://wa.me/393662327049?text=Salve%20la%20contatto%20per%20informazioni%20inerenti%20l%27attivit%C3%A0%20informatica" 
-   class="button" 
-   style="font-size:22px; color:#000;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-         alt="WhatsApp" 
-         style="height:20px; vertical-align:middle; margin-right:6px;">
-    Contattami via WhatsApp
-</a>
-
-
-
-
-
-
-
-
-
-                         
-                        </section>
-                        <div class="copyright">
-                            <ul class="menu">
-                                <li>&copy; Luca Droi© 2025. Tutti i diritti riservati.</li>
-                                <li>Design: <a href="https://lucandroid70.github.io/">Luca Droi© 2025</a></li>
-                            </ul>
-                        </div>
+                <div class="skills-grid reveal">
+                    <div class="skill-category">
+                        <h4> Windows Server & Active Directory</h4>
+                        <ul>
+                            <li>Active Directory (creazione, gestione, replica, recovery)</li>
+                            <li>File Server e Print Server</li>
+                            <li>Backup e disaster recovery</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4> Linux Systems</h4>
+                        <ul>
+                            <li>Debian, Ubuntu Server, CentOS, Rocky Linux, RHEL</li>
+                            <li>Hardening del kernel e sicurezza di sistema</li>
+                            <li>Automazione Bash e Python</li>
+                            <li>Apache, Nginx, PHP-FPM</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4> Virtualizzazione & Container</h4>
+                        <ul>
+                            <li>Microsoft Hyper-V, Proxmox VE</li>
+                            <li>Docker, Docker Compose</li>
+                            <li>Container Linux e orchestrazione</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4> Cybersecurity</h4>
+                        <ul>
+                            <li>Monitoraggio reti e intrusion detection</li>
+                            <li>Hardening di sistemi e servizi</li>
+                            <li>Valutazione del rischio e audit</li>
+                            <li>Formazione su best practice</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4> Digital Forensics</h4>
+                        <ul>
+                            <li>FTK Imager e EnCase</li>
+                            <li>Autopsy per analisi dettagliata</li>
+                            <li>Imaging bit-for-bit</li>
+                            <li>Recupero dati da dispositivi crittografati</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4> Networking</h4>
+                        <ul>
+                            <li>Reti cablate e Wi-Fi (802.11ac/ax)</li>
+                            <li>VPN site-to-site e remote access</li>
+                            <li>Gestione centralizzata access point</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Privacy Banner -->
-        <div id="privacy-banner" style="position:fixed; bottom:0; width:100%; background:#f4f4f4; color:#000; padding:15px; box-shadow:0 -2px 5px rgba(0,0,0,0.1); display:flex; justify-content:space-between; align-items:center; z-index:1000; font-size:14px;">
-            <div style="flex:1;">Questo sito non raccoglie dati né usa cookie. Puoi scegliere se proseguire.</div>
-            <div style="display:flex; gap:10px;">
-                <button onclick="hideBanner('Accettato')" style="background:#4CAF50; color:white; border:none; padding:10px 15px; cursor:pointer;">Accetto</button>
-                <button onclick="rejectAction()" style="background:#f44336; color:white; border:none; padding:10px 15px; cursor:pointer;">Rifiuto</button>
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h3>Pronto a Risolvere il Tuo Problema?</h3>
+                <p>Dopo 35 anni di servizio istituzionale, metto la mia esperienza a disposizione di privati che cercano un supporto informatico serio, competente e riservato.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/393662327049?text=Salve%20la%20contatto%20per%20informazioni%20inerenti%20l%27attivit%C3%A0%20informatica" class="btn btn-primary" target="_blank">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        WhatsApp
+                    </a>
+                    <a href="mailto:luca.sabato@ikmail.com" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Email
+                    </a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <script>
-            function hideBanner(choice) {
-                document.getElementById('privacy-banner').style.display = 'none';
-                console.log("Consenso:", choice);
-            }
-            function rejectAction() {
-                hideBanner('Rifiutato');
-                window.location.href = "https://www.google.it";
-            }
-        </script>
+    <!-- PRIVACY -->
+    <section class="privacy" id="privacy">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">Trasparenza</p>
+                <h2 class="section-title">Informativa Privacy</h2>
+                <p class="section-subtitle">Conforme al Regolamento UE 2016/679 (GDPR)</p>
+            </div>
+            <div class="privacy-content reveal">
+                <div class="privacy-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Nessun dato personale raccolto
+                </div>
+                <h3>Informativa ai sensi dell'art. 13 del GDPR</h3>
+                <p>Il presente documento costituisce l'informativa privacy resa ai sensi dell'art. 13 del Regolamento (UE) 2016/679 ("GDPR") per il sito web <strong>https://lucandroid70.github.io</strong>, di proprietà e gestione di Luca Droi, tecnico informatico specializzato in cybersecurity e digital forensics.</p>
+                <h3>Nessun dato personale viene raccolto</h3>
+                <p>Questo sito web non raccoglie né traccia alcun dato personale degli utenti. In particolare:</p>
+                <ul>
+                    <li>Nessun cookie è utilizzato, né tecnico né di profilazione</li>
+                    <li>Nessun sistema di analisi (es. Google Analytics) è installato</li>
+                    <li>Nessun modulo di contatto raccoglie informazioni: il contatto avviene esclusivamente tramite WhatsApp o email, al di fuori del sito</li>
+                    <li>Nessun dato di navigazione viene memorizzato o registrato</li>
+                </ul>
+                <h3>Finalità del trattamento</h3>
+                <p>Non essendoci raccolta di dati, non vi è alcun trattamento di dati personali da parte del titolare del sito.</p>
+                <h3>Titolare del trattamento</h3>
+                <p>Titolare del trattamento è <strong>Luca Droi</strong>, con email: <a href="mailto:luca.sabato@ikmail.com" style="color: var(--color-accent);">luca.sabato@ikmail.com</a>. Il titolare non effettua alcun trattamento, ma resta disponibile per eventuali richieste ai sensi degli artt. 15-22 del GDPR.</p>
+                <h3>Dati condivisi con terze parti</h3>
+                <p>Nessun dato è condiviso con terze parti, inclusi fornitori tecnologici, pubblicitari o social network.</p>
+                <h3>Trasferimenti di dati all'estero</h3>
+                <p>Non essendoci raccolta dati, non vi sono trasferimenti transfrontalieri né verso Paesi UE né extra-UE.</p>
+                <h3>Sicurezza e riservatezza</h3>
+                <p>Pur non raccogliendo dati, il sito è realizzato con principi di <strong>security by design</strong>, coerenti con la mia esperienza pluriennale nella protezione di dati sensibili per Istituzioni Italiane. Il codice è pulito, leggero e privo di script non necessari.</p>
+                <h3>Aggiornamenti dell'informativa</h3>
+                <p>Questa informativa può essere aggiornata periodicamente per mantenere la massima trasparenza. L'ultima revisione è del: <strong>31 luglio 2026</strong>.</p>
+                <p style="margin-top: 2rem; font-style: italic; color: var(--color-text);">Questo sito crede nella privacy reale. Non la promette: la pratica.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.dropotron.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-    </div>
+    <!-- FOOTER -->
+    <footer id="contatti">
+        <div class="footer-content">
+            <div class="footer-logo">Luca <span>Droi</span></div>
+            <div class="footer-contact">
+                <a href="https://wa.me/393662327049?text=Salve%20la%20contatto%20per%20informazioni%20inerenti%20l%27attivit%C3%A0%20informatica" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    WhatsApp
+                </a>
+                <a href="mailto:luca.sabato@ikmail.com">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Email
+                </a>
+            </div>
+            <nav class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#servizi">Servizi</a>
+                <a href="#chi-sono">Chi Sono</a>
+                <a href="#privacy">Privacy</a>
+                <a href="#contatti">Contatti</a>
+            </nav>
+            <div class="footer-copy">
+                &copy; Luca Droi 2026. Tutti i diritti riservati. Design: Luca Droi 2026
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        // ==================== MATRIX ANIMATION ====================
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        let w, h;
+        const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ<>[]{}()/\\|;:,.?';
+        const fontSize = 14;
+        let columns = [];
+        let drops = [];
+
+        function resizeMatrix() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+            columns = Math.floor(w / fontSize);
+            drops = [];
+            for (let i = 0; i < columns; i++) {
+                drops[i] = Math.floor(Math.random() * -100);
+            }
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(248, 250, 252, 0.08)';
+            ctx.fillRect(0, 0, w, h);
+
+            ctx.fillStyle = '#0b5e4a';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const char = chars.charAt(Math.floor(Math.random() * chars.length));
+                const x = i * fontSize;
+                const y = drops[i] * fontSize;
+
+                // Effetto fade: più scuro in testa
+                const brightness = Math.random() > 0.7 ? 'rgba(11,94,74,0.9)' : 'rgba(11,94,74,0.5)';
+                ctx.fillStyle = brightness;
+                ctx.fillText(char, x, y);
+
+                if (y > h && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+
+            requestAnimationFrame(drawMatrix);
+        }
+
+        window.addEventListener('resize', resizeMatrix);
+        resizeMatrix();
+        drawMatrix();
+
+        // ==================== NAVBAR SCROLL ====================
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // ==================== REVEAL OBSERVER ====================
+        const revealEls = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('active');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        revealEls.forEach(el => observer.observe(el));
+
+        // ==================== SMOOTH SCROLL ANCHOR ====================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ==================== MOBILE MENU TOGGLE ====================
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.background = 'rgba(248,250,252,0.96)';
+                navLinks.style.backdropFilter = 'blur(20px)';
+                navLinks.style.padding = '2rem';
+                navLinks.style.gap = '1.5rem';
+                navLinks.style.boxShadow = '0 10px 40px rgba(0,0,0,0.06)';
+                navLinks.style.borderRadius = '0 0 16px 16px';
+            }
+        });
+    </script>
 </body>
+
+
+
+<!--
+
+=======================================================================
+                              COPYRIGHT NOTICE
+=======================================================================
+
+// Copyright  © 2026 Luca Sabato. Tutti i diritti a me riservati.
+//
+// Sito ottimizzato con algoritmo proprietario per sfruttare SEO 2.0 IA 
+//
+// Quest'opera è protetta dalle leggi sul diritto d'autore e dalle altre leggi applicabili.
+// La riproduzione, modifica, distribuzione o riutilizzo di questo codice, per intero o in parte,
+// senza l'autorizzazione scritta dell'autore è espressamente vietata.
+//
+// @author    Luca Sabato 
+// @contact   luca.droi@outlook.it , lucandroid70@gmail.com , luca.sabato@ikmail.com , Telegram https://t.me/LucaHomer70
+// @copyright Luca Sabato © 2026
+// @version   1.2
+// @date      Luglio 2026
+//
+// Siti realizzati:
+// - https://www.toctoctunsisia.com
+// - https://www.toctocgroup.com
+// - https://www.sudioconsuelnzatunsia.com
+//
+// AVVERTENZA: Questo software è protetto dalle leggi sul copyright.
+// Qualsiasi utilizzo non autorizzato costituirà una violazione delle leggi vigenti
+// e sarà perseguibile secondo i termini di legge.
+
+=======================================================================
+                           END COPYRIGHT NOTICE
+=======================================================================
+
+-->
+
 </html>
-
-
-
