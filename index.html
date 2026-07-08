@@ -42,6 +42,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Luca Droi - Tecnico Informatico Senior. Servizi professionali di informatica, sicurezza, reti e recupero dati." />
+    
+    <!-- ===== META TAG PER SOCIAL (FACEBOOK, WHATSAPP, TELEGRAM, X) ===== -->
+    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lucandroid70.github.io/" />
+    <meta property="og:title" content="Luca Droi | Tecnico Informatico Senior" />
+    <meta property="og:description" content="Oltre 35 anni di esperienza istituzionale al servizio della tua sicurezza informatica. Soluzioni personalizzate, privacy garantita, competenza senza compromessi." />
+    <meta property="og:image" content="https://lucandroid70.github.io/" /> <!-- SOSTITUISCI CON L'URL REALE DEL TUO LOGO -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Luca Droi" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter (X) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://lucandroid70.github.io/" />
+    <meta name="twitter:title" content="Luca Droi | Tecnico Informatico Senior" />
+    <meta name="twitter:description" content="Oltre 35 anni di esperienza istituzionale al servizio della tua sicurezza informatica. Soluzioni personalizzate, privacy garantita, competenza senza compromessi." />
+    <meta name="twitter:image" content="https://lucandroid70.github.io/" /> <!-- SOSTITUISCI CON L'URL REALE DEL TUO LOGO -->
+
     <title>Luca Droi | Tecnico Informatico Senior</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -242,6 +262,20 @@
             padding: 0 2rem;
             position: relative;
             z-index: 1;
+        }
+
+        /* ===== STILE PER IL LOGO ===== */
+        .hero-logo {
+            width: 520px;
+            height: auto;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border-radius: 0%;
+            object-fit: contain;
+            /* Se il logo è quadrato, questo lo mantiene tale */
+            box-shadow: 0 10px 30px rgba(11, 94, 74, 0.15);
+            background: rgba(255, 255, 255, 0.5);
+            padding: 0.5rem;
         }
 
         .hero-subtitle {
@@ -766,10 +800,11 @@
             .nav-contact a {
                 padding: 0.3rem 0.6rem;
             }
+            .hero-logo {
+                width: 80px;
+                height: 80px;
+            }
         }
-
-
-
 
 
 
@@ -1132,12 +1167,6 @@
 
 
 
-
-
-
-
-
-
   
     <!-- CANVAS MATRIX -->
     <canvas id="matrix-canvas"></canvas>
@@ -1176,6 +1205,9 @@
     <!-- HERO -->
     <section class="hero" id="home">
         <div class="hero-content">
+            <!-- ===== LOGO AGGIUNTO QUI ===== -->
+            <img src="logo.png" alt="Luca Droi - Tecnico Informatico Senior" class="hero-logo" />
+            
             <p class="hero-subtitle">Tecnico Informatico Senior</p>
             <h1 class="hero-title">Luca Droi</h1>
             <p class="hero-description">
