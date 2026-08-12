@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casi di Successo | Luca Droi</title>
+    <style>
+        /* ----- RESET & VARIABILI (chiari) ----- */
+        :root {
+            --bg-main: #f6f9fc;
+            --bg-card: #ffffff;
+            --bg-card-alt: #f0f4f9;
+            --bg-accent-soft: #e8f0fe;
+            --accent: #2563eb;
+            --accent-light: #3b82f6;
+            --accent-glow: rgba(37, 99, 235, 0.08);
+            --text: #0b1a2e;
+            --text-secondary: #1e3a5f;
+            --text-muted: #5e6f8d;
+            --border: #dce3ed;
+            --success: #0d9488;
+            --success-dim: rgba(13, 148, 136, 0.06);
+            --danger: #dc2626;
+            --shadow: 0 4px 24px rgba(0, 20, 50, 0.06), 0 1px 4px rgba(0, 20, 50, 0.04);
+            --shadow-hover: 0 12px 48px rgba(0, 20, 50, 0.10), 0 2px 8px rgba(0, 20, 50, 0.04);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: all 0.25s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg-main);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* ----- HEADER / NAV (chiaro) ----- */
+        header {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--accent);
+        }
+
+        .logo span {
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .back-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* ----- PAGE HEADER ----- */
+        .page-header {
+            padding: 140px 0 50px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        .page-header h1 span {
+            color: var(--accent);
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* ----- CASE STUDY CARD (chiara) ----- */
+        .case-study {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px 44px;
+            margin-bottom: 36px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .case-study:hover {
+            border-color: var(--accent-light);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .case-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+
+        .case-subtitle {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .case-tag {
+            background: var(--bg-accent-soft);
+            color: var(--accent);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border: 1px solid rgba(37, 99, 235, 0.12);
+            white-space: nowrap;
+        }
+
+        /* ----- GRID (situazione / intervento) ----- */
+        .case-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            margin: 20px 0 28px;
+        }
+
+        .case-box {
+            background: var(--bg-card-alt);
+            border-radius: var(--radius-sm);
+            padding: 24px 28px;
+            border: 1px solid var(--border);
+        }
+
+        .case-box h4 {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+        }
+
+        .case-box ul {
+            list-style: none;
+        }
+
+        .case-box li {
+            padding: 5px 0 5px 22px;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .case-box li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--danger);
+        }
+
+        .case-box.solution li::before {
+            color: var(--success);
+        }
+
+        /* ----- RISULTATI ----- */
+        .case-results {
+            background: var(--success-dim);
+            border-left: 4px solid var(--success);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 20px 30px;
+            margin-top: 12px;
+        }
+
+        .case-results h4 {
+            color: var(--success);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .case-results p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ----- TESTIMONIAL (chiaro) ----- */
+        .testimonial {
+            background: var(--bg-accent-soft);
+            border-radius: var(--radius-sm);
+            padding: 28px 32px;
+            margin-top: 24px;
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            position: relative;
+            border: 1px solid rgba(37, 99, 235, 0.08);
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 3.4rem;
+            color: var(--accent);
+            opacity: 0.15;
+            position: absolute;
+            top: 8px;
+            left: 18px;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-author {
+            margin-top: 14px;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-role {
+            font-style: normal;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ----- STATS BANNER (chiaro) ----- */
+        .stats-banner {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 44px 32px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+            margin: 56px 0 48px;
+            box-shadow: var(--shadow);
+        }
+
+        .stats-banner .number {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+        }
+
+        .stats-banner .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-weight: 500;
+        }
+
+        /* ----- CTA SECTION (chiara) ----- */
+        .cta-section {
+            background: linear-gradient(135deg, #eef4ff 0%, #ffffff 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 56px 48px;
+            text-align: center;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow);
+        }
+
+        .cta-section h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+            color: var(--text-secondary);
+        }
+
+        .cta-section .cta-sub {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .cta-section .cta-contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px 40px;
+            margin: 18px 0 20px;
+            font-size: 0.95rem;
+        }
+
+        .cta-section .cta-contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cta-section .cta-contact a:hover {
+            color: #1a4fcf;
+            text-decoration: underline;
+        }
+
+        .cta-section .cta-location {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            background: var(--accent);
+            color: #fff;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px -8px rgba(37, 99, 235, 0.3);
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #1a4fcf;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px -8px rgba(37, 99, 235, 0.45);
+        }
+
+        /* ----- FOOTER (chiaro) ----- */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0 32px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            background: var(--bg-card);
+        }
+
+        footer .footer-contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px 36px;
+            margin: 10px 0 16px;
+            font-size: 0.9rem;
+        }
+
+        footer .footer-contact a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        footer .footer-contact a:hover {
+            color: var(--accent);
+        }
+
+        footer .footer-location {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        footer .copy {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 768px) {
+            .case-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .stats-banner {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                padding: 32px 20px;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .case-study {
+                padding: 28px 20px;
+            }
+
+            .cta-section {
+                padding: 36px 20px;
+            }
+
+            .cta-section .cta-contact {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .case-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .case-tag {
+                align-self: flex-start;
+            }
+
+            footer .footer-contact {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-banner {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .stats-banner .number {
+                font-size: 1.8rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="container">
+        <div class="logo">LUCA<span>DROI</span></div>
+        <a href="index.html" class="back-link">← Torna alla Home</a>
+    </nav>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <h1>Casi di <span>Successo</span></h1>
+        <p>Scenario realistici basati su tipologie di intervento effettivamente svolti nel corso della carriera operativa e consulenziale.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <!-- CASO 1 -->
+        <div class="case-study">
+            <div class="case-header">
+                <div>
+                    <div class="case-title">Recupero post-ransomware per azienda manifatturiera</div>
+                    <div class="case-subtitle">Settore: Industria manifatturiera · 120 dipendenti · Nord Italia</div>
+                </div>
+                <span class="case-tag">Incident Response</span>
+            </div>
+
+            <div class="case-grid">
+                <div class="case-box">
+                    <h4>🔴 La Situazione</h4>
+                    <ul>
+                        <li>Criptazione di 3 server file e database ERP durante il weekend</li>
+                        <li>Richiesta riscatto: 450.000€ in Bitcoin</li>
+                        <li>Produzione ferma da 36 ore, ordini in scadenza</li>
+                        <li>Backup non testati da 8 mesi, recupero incerto</li>
+                        <li>Panico management, timore danno reputazionale</li>
+                    </ul>
+                </div>
+                <div class="case-box solution">
+                    <h4>🟢 L'Intervento</h4>
+                    <ul>
+                        <li>Attivazione protocollo IR entro 2 ore dalla chiamata</li>
+                        <li>Isolamento chirurgico dei sistemi compromessi senza spegnere rete</li>
+                        <li>Forensics su endpoint per tracciare vettore d'ingresso (phishing spear)</li>
+                        <li>Recupero dati da backup shadow nascosti + rebuild sistemi critici</li>
+                        <li>Negoziazione con threat actor per estensione deadline (senza pagare)</li>
+                        <li>Produzione ripristinata in 72 ore totali</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-results">
+                <h4>Risultati</h4>
+                <p>Zero euro pagati ai ransomware. Produzione ripristinata in 72 ore anziché le 2-3 settimane stimate inizialmente. Identificato e rimosso il persistence mechanism. Implementato sistema backup 3-2-1 con test mensili automatizzati. Azienda oggi compliant NIS2.</p>
+            </div>
+
+            <div class="testimonial">
+                <p>Abbiamo chiamato nel panico più totale. In 72 ore siamo tornati operativi senza pagare un centesimo. La cosa che più abbiamo apprezzato è stata la calma assoluta con cui ha gestito la crisi, comunicando passo dopo passo con il management. Sembrava di avere un generale in sala riunioni.</p>
+                <div class="testimonial-author">Mario R.</div>
+                <div class="testimonial-role">Amministratore Delegato, settore componentistica auto</div>
+            </div>
+        </div>
+
+        <!-- CASO 2 -->
+        <div class="case-study">
+            <div class="case-header">
+                <div>
+                    <div class="case-title">Adeguamento NIS2 per gruppo sanitario</div>
+                    <div class="case-subtitle">Settore: Sanità privata · 8 strutture · Centro Italia</div>
+                </div>
+                <span class="case-tag">Virtual CISO</span>
+            </div>
+
+            <div class="case-grid">
+                <div class="case-box">
+                    <h4>🔴 La Situazione</h4>
+                    <ul>
+                        <li>Gruppo sanitario con 8 poliambulatori, nessun responsabile sicurezza</li>
+                        <li>Scadenza NIS2 imminente, rischio sanzioni fino al 2% fatturato</li>
+                        <li>Dati sanitari (cartelle cliniche) su server on-premise non cifrati</li>
+                        <li>Accessi remoti medici tramite RDP esposto su internet</li>
+                        <li>Nessun piano di risposta agli incidenti documentato</li>
+                    </ul>
+                </div>
+                <div class="case-box solution">
+                    <h4>🟢 L'Intervento</h4>
+                    <ul>
+                        <li>Audit completo 360° su tutte le 8 strutture in 3 settimane</li>
+                        <li>Mappatura asset critici e classificazione dati sanitari</li>
+                        <li>Implementazione cifratura LUKS su tutti i server e politica DLP</li>
+                        <li>Sostituzione RDP con accesso VPN WireGuard + MFA</li>
+                        <li>Redazione piano di risposta agli incidenti e procedure operative</li>
+                        <li>Formazione del personale medico e amministrativo (120 persone)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-results">
+                <h4>Risultati</h4>
+                <p>Conformità NIS2 raggiunta prima della scadenza. Zero sanzioni. Riduzione del rischio di data breach del 78% secondo analisi quantitativa post-intervento. Il gruppo è stato selezionato come caso studio positivo da un ordine professionale regionale.</p>
+            </div>
+
+            <div class="testimonial">
+                <p>Finalmente qualcuno che ci ha spiegato la normativa senza farci sentire in colpa. Ha tradotto l'obbligo di legge in un piano concreto, gestibile e non invasivo per i medici. La sua esperienza istituzionale si è sentita in ogni riunione: precisione, riservatezza e nessuna promessa che non potesse mantenere.</p>
+                <div class="testimonial-author">Dott.ssa Elena V.</div>
+                <div class="testimonial-role">Direttore Sanitario, gruppo poliambulatori</div>
+            </div>
+        </div>
+
+        <!-- CASO 3 -->
+        <div class="case-study">
+            <div class="case-header">
+                <div>
+                    <div class="case-title">Penetration test e hardening per fintech</div>
+                    <div class="case-subtitle">Settore: Fintech / Pagamenti digitali · 45 dipendenti · Roma</div>
+                </div>
+                <span class="case-tag">Penetration Testing</span>
+            </div>
+
+            <div class="case-grid">
+                <div class="case-box">
+                    <h4>🔴 La Situazione</h4>
+                    <ul>
+                        <li>Startup fintech in crescita, prossima a round di Serie A</li>
+                        <li>Due diligence degli investitori richiedeva certificazione sicurezza</li>
+                        <li>Infrastruttura cloud AWS con container Docker, nessun security review</li>
+                        <li>Preoccupazione per vulnerabilità non note nel codice legacy</li>
+                        <li>Bisogno di dimostrare "security maturity" a potenziali partner bancari</li>
+                    </ul>
+                </div>
+                <div class="case-box solution">
+                    <h4>🟢 L'Intervento</h4>
+                    <ul>
+                        <li>Penetration test black-box e white-box su web app e API REST</li>
+                        <li>Container security assessment: scanning con Trivy, review Dockerfile</li>
+                        <li>Identificata SQL injection critica su endpoint pagamenti (CVSS 9.1)</li>
+                        <li>Hardening cluster Kubernetes, network policies, RBAC</li>
+                        <li>Redazione report esecutivo per investitori (linguaggio business)</li>
+                        <li>Remediation supportata con 4 sprint settimanali</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-results">
+                <h4>Risultati</h4>
+                <p>12 vulnerabilità identificate, 3 critiche. Fix completati in 6 settimane. Report accettato da due fondi di venture capital per due diligence. Startup ha ottenuto la certificazione SOC 2 Type I dopo 8 mesi, con questo intervento come fondamento. Nessun data breach registrato da allora (24 mesi).</p>
+            </div>
+
+            <div class="testimonial">
+                <p>Non ci ha semplicemente "trovato i buchi". Ci ha fatto capire come pensano gli attaccanti e ci ha dato una roadmap per diventare un'azienda matura sulla sicurezza. Il report per gli investitori è stato un capolavoro di traduzione tecnico-business. Vale ogni euro speso e di più.</p>
+                <div class="testimonial-author">Luca B.</div>
+                <div class="testimonial-role">CTO, fintech pagamenti B2B</div>
+            </div>
+        </div>
+
+        <!-- CASO 4 -->
+        <div class="case-study">
+            <div class="case-header">
+                <div>
+                    <div class="case-title">Perizia forense per causa di frode aziendale</div>
+                    <div class="case-subtitle">Settore: Consulenza ingegneristica · 200 dipendenti · Milano</div>
+                </div>
+                <span class="case-tag">Digital Forensics</span>
+            </div>
+
+            <div class="case-grid">
+                <div class="case-box">
+                    <h4>🔴 La Situazione</h4>
+                    <ul>
+                        <li>Sospetta frode da parte di ex-dirigente: sottrazione dati clienti</li>
+                        <li>Accusa di concorrenza sleale e violazione segreto industriale</li>
+                        <li>Necessaria prova informatica valida in tribunale</li>
+                        <li>IT interno non autorizzato a toccare i dispositivi (rischio contaminazione)</li>
+                        <li>Scadenza perizia: 45 giorni per l'udienza</li>
+                    </ul>
+                </div>
+                <div class="case-box solution">
+                    <h4>🟢 L'Intervento</h4>
+                    <ul>
+                        <li>Acquisizione forense bit-stream di 4 laptop e 2 smartphone aziendali</li>
+                        <li>Utilizzo hardware write blocker e catena di custodia documentata</li>
+                        <li>Timeline analysis con Plaso/Log2timeline su 18 mesi di attività</li>
+                        <li>Recupero file cancellati e analisi cloud sync (OneDrive logs)</li>
+                        <li>Correlazione accessi notturni anomali con email inviate a competitor</li>
+                        <li>Redazione perizia tecnica 80 pagine + allegati forensi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-results">
+                <h4>Risultati</h4>
+                <p>Perizia accettata dal tribunale senza contestazioni. Identificata esfiltrazione di 2.400 file sensitivi in 14 sessioni notturne. La controparte ha ritirato la richiesta di risarcimento anticipato e si è avviata una transazione favorevole al cliente. Il dirigente è stato successivamente condannato anche penalmente.</p>
+            </div>
+
+            <div class="testimonial">
+                <p>Il nostro studio legale ha lavorato con molti periti informatici. La differenza qui è stata la rigidità processuale: ogni passo documentato, ogni acquisizione ripetibile, ogni conclusione supportata da evidenza concreta. In tribunale non è bastata una parola della controparte. Lavoro da manuale.</p>
+                <div class="testimonial-author">Avv. Paolo M.</div>
+                <div class="testimonial-role">Partner, studio legale commerciale</div>
+            </div>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-banner">
+            <div>
+                <div class="number">50+</div>
+                <div class="label">Aziende assistite</div>
+            </div>
+            <div>
+                <div class="number">0€</div>
+                <div class="label">Riscatti pagati (IR)</div>
+            </div>
+            <div>
+                <div class="number">100%</div>
+                <div class="label">Perizie accettate</div>
+            </div>
+            <div>
+                <div class="number">37+</div>
+                <div class="label">Anni di esperienza</div>
+            </div>
+        </div>
+
+        <!-- CTA SECTION -->
+        <div class="cta-section">
+            <h2>Hai un caso simile?</h2>
+            <p class="cta-sub">Raccontami la tua situazione. La prima consulenza di 30 minuti è gratuita e senza impegno.</p>
+            <div class="cta-contact">
+                <a href="mailto:luca.sabato@ikmail.com">✉ luca.sabato@ikmail.com</a>
+                <a href="tel:+393662327049">📞 +39 366 232 7049</a>
+            </div>
+            <p class="cta-location">Roma — Attività nazionale e internazionale</p>
+            <a href="mailto:luca.sabato@ikmail.com" class="btn">Scrivimi ora →</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-contact">
+            <a href="mailto:luca.sabato@ikmail.com">luca.sabato@ikmail.com</a>
+            <a href="tel:+393662327049">+39 366 232 7049</a>
+            <span>Roma — Attività nazionale e internazionale</span>
+        </div>
+        <div class="copy">© 2026 Luca Sabato — Tutti i diritti riservati | Roma, Italia</div>
+    </div>
+</footer>
+
+</body>
+</html>
